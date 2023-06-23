@@ -43,7 +43,7 @@ INSERT INTO films (name, year, country)
 INSERT INTO projections (hall_id, film_id, broadcasting_time, audience) 
 	VALUES (1, 1, '2023-03-22 18:30:00', 150);
     
-    
+-- 2    
 SELECT c.name AS cinema_name, h.name AS hall_name, p.broadcasting_time
 FROM cinemas AS c
 INNER JOIN halls AS h ON c.id = h.cinema_id
@@ -52,7 +52,7 @@ INNER JOIN films AS f ON p.film_id = f.id
 WHERE (h.hall_status = 'VIP' OR h.hall_status = 'Deluxe') AND f.name = 'Final Destinaton 7'
 ORDER BY c.name, h.name;
 
-
+-- 3
 SELECT SUM(p.audience) AS total_audience
 FROM cinemas AS c
 INNER JOIN halls AS h ON c.id = h.cinema_id
