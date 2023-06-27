@@ -71,10 +71,10 @@ ORDER BY sg.location, sg.dayOfWeek, sg.hourOfTraining;
 
 
 CREATE VIEW sp (Student_name, Class, Location, Coach_name) AS
-SELECT students.name, students.class, sportGroups.location, coaches.name FROM students JOIN student_sport ON 
-students.id=student_sport.student_id JOIN sportGroups ON 
-student_sport.sportGroup_id=sportGroups.id JOIN coaches ON
-sportGroups.coach_id=coaches.id 
+SELECT students.name, students.class, sportGroups.location, coaches.name FROM students 
+JOIN student_sport ON students.id = student_sport.student_id 
+JOIN sportGroups ON student_sport.sportGroup_id = sportGroups.id 
+JOIN coaches ON sportGroups.coach_id = coaches.id 
 WHERE sportGroups.hourOfTraining LIKE '08:00:00';
 SELECT * FROM sp;
 
