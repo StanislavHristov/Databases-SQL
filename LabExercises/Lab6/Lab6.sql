@@ -248,8 +248,7 @@ VALUES	(NULL, '1', '1', '200', '1', 2022, now()),
 		(NULL, '1', '2', '200', '3', 2020, now()),
 		(NULL, '4', '2', '200', '1', 2020, now()),
 		(NULL, '4', '2', '200', '2', 2020, now());
-        
-        
+             
 -- 1
 SELECT students.name, students.class, students.phone 
 FROM sports 
@@ -285,7 +284,7 @@ WHERE coaches.egn = '7509041245'
 ORDER BY students.name, taxespayments.month, taxespayments.year;
 
 -- 5
-SELECT count(students.name) 
+SELECT COUNT(students.name) 
 FROM students 
 JOIN student_sport ON students.id = student_sport.student_id
 JOIN sportGroups ON student_sport.sportGroup_id = sportGroups.id
@@ -300,7 +299,7 @@ JOIN coaches ON sportGroups.coach_id = coaches.id;
 
 -- 7
 SELECT DISTINCT sports.name, sportGroups.location, 
-count(student_sport.student_id) AS number_of_students
+COUNT(student_sport.student_id) AS number_of_students
 FROM sports
 JOIN student_sport ON sports.id = student_sport.student_id
 JOIN sportGroups ON student_sport.sportGroup_id = sportGroups.id
