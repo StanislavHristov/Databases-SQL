@@ -96,8 +96,8 @@ VALUES 	('Iliyan Ivanov', '9401150045', 'Sofia-Mladost 1', '0893452120', '10'),
 		('Antoaneta Ivanova Georgieva', '9411104547', 'Sofia-Krasno selo', '0874526235', '10');
 		
 INSERT INTO sportGroups
-VALUES 	(NULL, 'Sofia-Mladost 1', 'Monday', '08:00:00', 1, 1 ),
-		(NULL, 'Sofia-Mladost 1', 'Monday', '09:30:00', 1, 2 ),
+VALUES 	(NULL, 'Sofia-Mladost 1', 'Monday', '08:00:00', 1, 1),
+		(NULL, 'Sofia-Mladost 1', 'Monday', '09:30:00', 1, 2),
 		(NULL, 'Sofia-Liylin 7', 'Sunday', '08:00:00', 2, 1),
 		(NULL, 'Sofia-Liylin 2', 'Sunday', '09:30:00', 2, 2),	
 		(NULL, 'Sofia-Liylin 3', 'Tuesday', '09:00:00', NULL, NULL),			
