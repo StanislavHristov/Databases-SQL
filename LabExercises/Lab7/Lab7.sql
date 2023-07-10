@@ -8,11 +8,11 @@ BEGIN
 SELECT sports.name, sportgroups.location, sportgroups.hourOfTraining, sportgroups.dayOfWeek, 
 students.name, students.phone
 FROM sportgroups
-JOIN coaches ON sportgroups.coach_id=coaches.id
-JOIN sports ON sportgroups.sport_id=sports.id
-JOIN student_sport ON sportgroups.id=student_sport.sportgroup_id
-JOIN students ON student_sport.student_id=students.id
-WHERE coaches.name=coachName;
+JOIN coaches ON sportgroups.coach_id = coaches.id
+JOIN sports ON sportgroups.sport_id = sports.id
+JOIN student_sport ON sportgroups.id = student_sport.sportgroup_id
+JOIN students ON student_sport.student_id = students.id
+WHERE coaches.name = coachName;
 END;
 |
 delimiter ;
@@ -27,11 +27,11 @@ CREATE procedure zadacha2(IN sportId INT)
 BEGIN
 SELECT sports.name, students.name, coaches.name
 FROM students
-JOIN student_sport ON students.id=student_sport.student_id
-JOIN sportgroups ON student_sport.sportgroup_id=sportgroups.id
-JOIN sports ON sportgroups.sport_id=sports.id
-JOIN coaches ON sportgroups.coach_id=coaches.id
-WHERE sportId=sports.id;
+JOIN student_sport ON students.id = student_sport.student_id
+JOIN sportgroups ON student_sport.sportgroup_id = sportgroups.id
+JOIN sports ON sportgroups.sport_id = sports.id
+JOIN coaches ON sportgroups.coach_id = coaches.id
+WHERE sportId = sports.id;
 END;
 |
 delimiter ;
@@ -46,9 +46,9 @@ CREATE procedure zadacha3(IN studentName VARCHAR(255), inYear YEAR)
 BEGIN
 SELECT studentName, AVG(taxesPayments.paymentAmount) AS AverageTaxes
 FROM students
-JOIN taxespayments ON students.id=taxespayments.student_id
-WHERE studentName=students.name
-AND inYear=taxespayments.year;
+JOIN taxespayments ON students.id = taxespayments.student_id
+WHERE studentName = students.name
+AND inYear = taxespayments.year;
 END;
 |
 delimiter ;
