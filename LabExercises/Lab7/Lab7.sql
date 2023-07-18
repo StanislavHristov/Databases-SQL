@@ -52,7 +52,7 @@ AND inYear = taxespayments.year;
 END;
 |
 delimiter ;
-CALL zadacha3('Iliyan Ivanov',2022);
+CALL zadacha3('Iliyan Ivanov', 2022);
  
 -- 4
 use school_sport_clubs;
@@ -64,8 +64,8 @@ BEGIN
 DECLARE counter INT;
 SELECT COUNT(sportgroups.coach_id) INTO counter
 FROM coaches
-JOIN sportgroups ON sportgroups.coach_id=coaches.id
-WHERE coaches.name=coachName;
+JOIN sportgroups ON sportgroups.coach_id = coaches.id
+WHERE coaches.name = coachName;
 IF(counter = 0 OR counter = NULL)
 THEN
 SELECT 'No groups for the trainer!' AS RESULT;
@@ -112,7 +112,7 @@ END /
 delimiter ;
 CALL transfer_money(1, 2, 5000);
 
-
+-- 6
 DELIMITER %
 DROP PROCEDURE IF EXISTS transfer_money;
 CREATE PROCEDURE transfer_money(
