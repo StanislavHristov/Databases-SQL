@@ -3,7 +3,7 @@ use school_sport_clubs;
 
 delimiter |
 DROP procedure IF EXISTS zadacha1 |
-CREATE procedure zadacha1(IN coachName VARCHAR (255))
+CREATE procedure zadacha1(IN coachName VARCHAR(255))
 BEGIN
 SELECT sports.name, sportgroups.location, sportgroups.hourOfTraining, sportgroups.dayOfWeek, 
 students.name, students.phone
@@ -16,6 +16,7 @@ WHERE coaches.name = coachName;
 END;
 |
 delimiter ;
+
 CALL zadacha1('Ivan Todorov Petkov');
  
 -- 2
@@ -35,6 +36,7 @@ WHERE sportId = sports.id;
 END;
 |
 delimiter ;
+
 CALL zadacha2(1);
  
 -- 3
@@ -52,6 +54,7 @@ AND inYear = taxespayments.year;
 END;
 |
 delimiter ;
+
 CALL zadacha3('Iliyan Ivanov', 2022);
  
 -- 4
@@ -75,6 +78,7 @@ END IF;
 END;
 |
 delimiter ;
+
 CALL zadacha4('Ivan Todorov Petkov');
 
 -- 5
@@ -110,6 +114,7 @@ BEGIN
     END IF;
 END /
 delimiter ;
+
 CALL transfer_money(1, 2, 5000);
 
 -- 6
